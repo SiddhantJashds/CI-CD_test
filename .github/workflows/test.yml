@@ -6,4 +6,5 @@ jobs:
     steps:
       - name: print environment
         run: echo "this is running on ${{secrets.ENV_TYPE}}"
-        run: python3 --version
+      - run: python3 --version
+      - run: echo "this is running on ${{variable.ENV_TYPE}}"
