@@ -5,7 +5,10 @@ jobs:
     environment: DEV
     container: python:3.10.0
     steps:
+      - uses: actions/checkout@v3
       - name: print environment
         run: echo "this is running on ${{secrets.ENV_TYPE}}"
       - run: python3 --version
       - run: echo "this is running on ${{vars.ENV_TYPE_V2}}"
+      - name: main.py file 
+        run: python main.py
