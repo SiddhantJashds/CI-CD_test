@@ -3,6 +3,7 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     environment: DEV
+    container: pandas:2.2.3
     steps:
       - name: print environment
         run: echo "this is running on ${{secrets.ENV_TYPE}}"
